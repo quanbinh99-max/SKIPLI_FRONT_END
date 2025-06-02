@@ -13,6 +13,7 @@ export default function AccessCodeForm({ phone, onSuccess }) {
     setLoading(true);
     try {
       const isValid = await validateAccessCode(phone, code);
+      console.log("🚀 ~ handleFinish ~ isValid:", isValid)
       if (isValid) {
         savePhoneToLocalStorage(phone);
         onSuccess();

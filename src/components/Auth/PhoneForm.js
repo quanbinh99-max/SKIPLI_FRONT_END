@@ -13,8 +13,8 @@ export default function PhoneForm({ onNext }) {
     setLoading(true);
     try {
       await createNewAccessCode(phoneNumber);
-      onNext(phoneNumber);
     } finally {
+      onNext(phoneNumber);
       setLoading(false);
     }
   };
